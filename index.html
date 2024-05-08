@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Screen Images</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+    }
+    .image-container {
+      flex: 1;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="image-container">
+    <img src="img1.jpg" alt="Image 1">
+  </div>
+  <div class="image-container">
+    <img src="img2.jpg" alt="Image 2">
+  </div>
+</div>
+</body>
+</html>
